@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PsychicGame</title>
+
+</head>
+<body>
+
+<h1>The Psichic Game</h1>
+	<h2>Guess what letter I'm thinking of</h2>
+		<script type="text/javascript">
+		var alfabet = ["a","b","c","d"];//,"e","f","g","h","i","j","k","l","m","n","p","q","r","s","t","u","v","w","x","y","z"];
+			var wins = 0;
+			var losses = 0;
+			var guessesLeft = 9;
+			document.onkeyup = function(event) {
+		var player = String.fromCharCode(event.keyCode).toLowerCase();
+		var computer = alfabet[Math.floor(Math.random() * alfabet.length)];
+		console.log(computer);
+		document.getElementById("ygsf").innerHTML = "Your guesses so far:" + " " + player;
+	}
+
+				function Results(player, computer )	{
+			if(computer === person){
+				wins++;
+			}
+			else {
+					losses++;
+				}
+				console.log(losses)
+			}
+
+		
+
+			//document.getElementById("wins").innerHTML = " Wins:" + win;
+			//document.getElementById("losses").innerHTML = " Losses: " + loss;
+			//document.getElementById("guesses").innerHTML = " Guesses left:" + " " guessesLeft;
+		
+				
+				
+			
+			
+
+			
+			
+	</script>
+	
+	<p id="wins">Wins: 0</p>
+	<p id="losses">Losses: 0</p> 
+	<p id="guesses">Guesses left: 9</p>
+	<p id="ygsf">Your guesses so far:</p>
+
+</body>
+</html>
