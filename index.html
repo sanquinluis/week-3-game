@@ -56,7 +56,7 @@
 	};
 
 		//Function will be called when we reset everything
-	var rest = function(){
+	var reset = function(){
 		totalGuesses = 9;
 		guessesLeft = 9;
 		guessedLetters =[];
@@ -94,12 +94,11 @@
 				document.querySelector("#wins").innerHTML = wins;
 
 				//We reset the game
-				rest();
+				reset();
 			}
 
 			//If out of guesses...
-		} 
-		else if(guessesLeft == 0){
+		}else if(guessesLeft == 0){
 
 			//Then w will loss and we'll update the HTML
 			losses++;
@@ -109,10 +108,10 @@
 
 			reset();
 
-		}
-	};
+			}	
+		};
 			
-		</script>
+	</script>
 
 	
 	</body>
